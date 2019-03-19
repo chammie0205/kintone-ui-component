@@ -78,7 +78,7 @@ export default class Tabs extends AbstractSingleSelection {
     const Component = withState(this._reactComponentClass);
     const additionalProps = {onSelect: this._onSelect};
     // eslint-disable-next-line react/jsx-filename-extension
-    const reactElement = <Component {...this.props} {...additionalProps} />;
+    const reactElement = <Component {...this.props} {...additionalProps} ref={el => (this._reactObject = el)} />;
     return reactElement;
   }
 

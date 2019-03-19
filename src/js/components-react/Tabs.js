@@ -37,15 +37,17 @@ const TabsReact = props => {
     );
   });
 
-  const defaultIndex = props.value ? props.value : 0;
+  const selectedIndex = props.value ? props.value : 0;
   return (
     <Tabs
       className="kuc-tabs-tabs"
       onSelect={_onSelect}
-      defaultIndex={defaultIndex}
+      selectedIndex={selectedIndex}
     >
       <TabList className="kuc-tabs-tab-list">{tabList}</TabList>
-      <div className="kuc-tabs-tab-contents">{tabPanel}</div>
+      <div className="kuc-tabs-tab-contents">
+        {tabPanel}
+      </div>
     </Tabs>
   );
 };
